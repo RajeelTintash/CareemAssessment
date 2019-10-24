@@ -45,6 +45,9 @@ The app fetches a list of popular movies from themoviedb.org using their api.
 ### Directory Structure
 - AppSource group contains The UI, NetworkLayer and Utilities grousps which contain their repective code.
 
+### Unit Tests
+- The app includes unit testing to test api's and generation of DTO's
+
 ### Build Details
 - Built using Xcode 11.1 GM Seed
 - Deplopyment target 12.0.
