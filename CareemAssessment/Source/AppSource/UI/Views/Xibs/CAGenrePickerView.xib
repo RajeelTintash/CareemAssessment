@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CAGenrePickerView" customModule="CareemAssesment" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="bhQ-Bq-XtT" id="7WL-m2-LXe"/>
+                <outlet property="genrePicker" destination="Xst-So-3vt" id="9qf-0w-Vs0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bhQ-Bq-XtT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3G-D1-6PT">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="doY-uC-0Id"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="Cancel" id="Lud-17-qtK">
+                            <connections>
+                                <action selector="cancelButtonPressed" destination="-1" id="r5f-qn-1oY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="tX2-qw-TW5"/>
+                        <barButtonItem title="Done" id="RRd-9m-8oF">
+                            <connections>
+                                <action selector="doneButtonPressed" destination="-1" id="Uld-Ta-KFU"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xst-So-3vt">
+                    <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="Dcq-0l-4Ul"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="MVC-sD-Kwo"/>
+                        <outlet property="delegate" destination="-1" id="3KJ-tl-lPu"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Xst-So-3vt" firstAttribute="leading" secondItem="bhQ-Bq-XtT" secondAttribute="leading" id="73y-mc-Drc"/>
+                <constraint firstItem="C3G-D1-6PT" firstAttribute="top" secondItem="bhQ-Bq-XtT" secondAttribute="top" id="A14-hm-YS4"/>
+                <constraint firstItem="C3G-D1-6PT" firstAttribute="leading" secondItem="bhQ-Bq-XtT" secondAttribute="leading" id="Gg9-iD-dXi"/>
+                <constraint firstAttribute="trailing" secondItem="C3G-D1-6PT" secondAttribute="trailing" id="ZDK-7L-XVD"/>
+                <constraint firstItem="Xst-So-3vt" firstAttribute="trailing" secondItem="bhQ-Bq-XtT" secondAttribute="trailing" id="b4e-l0-wsE"/>
+                <constraint firstItem="Xst-So-3vt" firstAttribute="top" secondItem="C3G-D1-6PT" secondAttribute="bottom" id="skP-fK-yP8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="ZQ1-Lg-Bo9"/>
+            <point key="canvasLocation" x="105.79710144927537" y="-193.52678571428569"/>
+        </view>
+    </objects>
+</document>
